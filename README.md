@@ -8,6 +8,13 @@ In-browser todo app using Supabase for authentication and backend
 
 ## Component Tree
 - `App`
+  - router routes: either `Auth` route or `TodoList` route
+  - `Auth`
+    - `UserAuthTypeToggle`
+    - `AuthTextEntry`
+  - `TodoList`
+    - `ListDisplay`
+    - `ListAddItem`
 
 
 ## Plan
