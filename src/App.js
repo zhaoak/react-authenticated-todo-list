@@ -2,6 +2,8 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
+import AuthPage from './components/AuthPage/AuthPage';
+
 function App() {
   return (
     <BrowserRouter>
@@ -9,7 +11,7 @@ function App() {
         <header className="App-header">TooDoo</header>
         <Switch>
           <Route exact path="/auth">
-            <h1>auuuuuuuth</h1>
+            <AuthPage />
           </Route>
 
           <Route exact path="/todo">
