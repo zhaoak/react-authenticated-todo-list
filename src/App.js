@@ -2,6 +2,8 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
+import { getUser } from './services/client.js';
+
 import AuthPage from './components/AuthPage/AuthPage';
 
 function App() {
@@ -19,10 +21,7 @@ function App() {
           </Route>
 
           <Route exact path="/">
-            <h1>
-              a redirect to wherever is appropriate, either auth or todo depending on if logged in,
-              will live here
-            </h1>
+            {getUser() ? <Redirect to="/todo" /> : <Redirect to="/auth" />}
           </Route>
 
           <Route path="*">

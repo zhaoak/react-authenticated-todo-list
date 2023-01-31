@@ -10,3 +10,25 @@ export function checkError({ data, error }) {
   }
   return data;
 }
+
+export function getUser() {
+  return client.auth.user();
+}
+
+export async function signUpUser(email, password) {
+  return await client.auth.signUp({
+    email,
+    password,
+  });
+}
+
+export async function signInUser(email, password) {
+  return await client.auth.signIn({
+    email,
+    password,
+  });
+}
+
+export async function signOutUser() {
+  await client.auth.signOut();
+}
